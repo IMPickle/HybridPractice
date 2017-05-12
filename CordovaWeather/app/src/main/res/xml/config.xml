@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.foreveross.cordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
+    <preference name="loglevel" value="DEBUG"/>
+    <name>app</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html"/>
+    <access origin="*"/>
+    <allow-intent href="market:*"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+
+     <!--Crosswalk插件，注释以下内容将使用系统的webview -->
+    <!--<preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine"/>-->
+    <!--<preference name="xwalkVersion" value="org.xwalk:xwalk_core_library:18+"/>-->
+    <!--<preference name="xwalkCommandLine" value="&#45;&#45;disable-pull-to-refresh-effect"/>-->
+    <!--<preference name="xwalkMode" value="embedded"/>-->
+    <!--<preference name="xwalkMultipleApk" value="true"/>-->
+
+    <!-- 白名单插件 -->
+    <!--<feature name="Whitelist">-->
+        <!--<param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin"/>-->
+        <!--<param name="onload" value="true"/>-->
+    <!--</feature>-->
+
+    <!-- 自定义插件 -->
+    <feature name="WeatherPlugin">
+        <param name="android-package" value="com.example.administrator.cordovaweather.Plugins.WeatherPlugin"/>
+        <param name="onload" value="true"/>
+    </feature>
+
+</widget>

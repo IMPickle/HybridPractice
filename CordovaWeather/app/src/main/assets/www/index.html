@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+    <script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+<br />
+<form action="/example/html/form_action.asp" method="get">
+
+    输入要获取天气的城市：<br /><input type="text" id="weather" /><br />
+    <button type="button" onclick="getWeather()">获取天气</button><br /><br />
+    <textarea id="weatherArea" rows="10" cols="50"></textarea>
+    <br />
+    <font size="3">由于城市过多，目前只实现查询北京、广州<br />上海、珠海、深圳、湛江。</font>
+</form>
+<script>
+
+       // 调用天气数据反馈
+        function getSuccess(s) {
+           document.getElementById('weatherArea').value=s;
+        };
+        // 调用反馈
+        function success() {
+           alert("查询成功");
+        };
+        function error(s) {
+            <!--alert("查询失败");-->
+            document.getElementById('weatherArea').value=s;
+        };
+
+        function getWeather() {
+            var s=document.getElementById('weather').value
+            cordova.exec(getSuccess, error, "WeatherPlugin", "getWeather", s);
+        };
+</script>
+</body>
+</html>

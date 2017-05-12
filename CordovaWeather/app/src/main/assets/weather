@@ -1,0 +1,16 @@
+{
+  "weather":
+  [
+    {"CityName":"北京","CityCode":"101010100"}
+  ,
+    {"CityName":"上海","CityCode":"101020100"}
+  ,
+    {"CityName":"广州","CityCode":"101280101"}
+  ,
+    {"CityName":"深圳","CityCode":"101280601"}
+  ,
+    {"CityName":"珠海","CityCode":"101280701"}
+  ,
+    {"CityName":"湛江","CityCode":"101281001"}
+  ]
+}
