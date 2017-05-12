@@ -1,0 +1,2 @@
+# HybridPractice
+HybridPractice：Cordova让原生Android调用天气API接口得到天气数据并返回给HTML5进行展示。
